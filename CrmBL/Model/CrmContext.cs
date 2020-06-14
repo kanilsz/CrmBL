@@ -9,7 +9,7 @@ namespace CrmBL.Model
 {
    public class CrmContext : DbContext
     {
-        public CrmContext() : base("CrmConnection")
+        public CrmContext() : base("Data Source=SPACE; Initial Catalog=DBCrm; Integrated Security=True;")
         {
         }
         public DbSet<Check> Checks { get; set; }

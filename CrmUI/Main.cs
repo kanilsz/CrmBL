@@ -36,5 +36,20 @@ namespace CrmUI
             var catalogCheck = new Catalog<Check>(db.Checks);
             catalogCheck.Show();
         }
+
+        private void SellerAddToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CustomerAddToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            var form = new CustomerForm();
+            if (form.ShowDialog()==DialogResult.OK)
+            {
+                db.Customers.Add(form.Customer);
+                db.SaveChanges();
+            }
+        }
     }
 }

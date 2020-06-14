@@ -11,9 +11,8 @@ using System.Windows.Forms;
 
 namespace CrmUI
 {
-    public partial class Catalog<T> : Form where T :class
+    public partial class Catalog<T> : Form where T : class
     {
-
         public Catalog(DbSet<T> set){ 
             InitializeComponent();
             dataGridView.DataSource = set.Local.ToBindingList();
