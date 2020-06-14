@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CrmBL.Model
 {
-    class Customer
+    public class Customer
     {
         public int CustomerId { get; set; }
         public string Name { get; set; }
