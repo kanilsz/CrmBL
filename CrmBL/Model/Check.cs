@@ -13,6 +13,11 @@ namespace CrmBL.Model
         public virtual Customer Customer { get; set; }
         public int SellerId { get; set; }
         public virtual Seller Seller{ get; set; }
-
+        public DateTime Created { get; set; }
+        public virtual ICollection<Sell> Sells { get; set; }
+        public override string ToString()
+        {
+            return $"№{CheckId} {Created.ToString("dd.mm.yyyy hh:mm:ss")}";
+        }
     }
 }
