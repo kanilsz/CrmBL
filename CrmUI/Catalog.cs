@@ -60,14 +60,55 @@ namespace CrmUI
                     {
                         product = form.Product;
                         db.SaveChanges();
+                        dataGridView.Update();
                     }
                 }
             }
+            else if (typeof(T) == typeof(Seller))
+            {
+                var seller = set.Find(id) as Seller;
+                if (seller != null)
+                {
+                    var form = new SellerForm(seller);
+                    if (form.ShowDialog() == DialogResult.OK)
+                    {
+                        seller = form.Seller;
+                        db.SaveChanges();
+                        dataGridView.Update();
+                    }
+                }
+            }
+            else if (typeof(T) == typeof(Customer))
+            {
+                var customer = set.Find(id) as Customer;
+                if (customer != null)
+                {
+                    var form = new CustomerForm(customer);
+                    if (form.ShowDialog() == DialogResult.OK)
+                    {
+                        customer = form.Customer;
+                        db.SaveChanges();
+                        dataGridView.Update();
+                    }
+                }
+            }
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
 
         }
+
+        //private void Update(T item, Form form)
+        //{
+        //        if (form.ShowDialog() == DialogResult.OK)
+        //        {
+        //            item = form.Product;
+        //            db.SaveChanges();
+        //            dataGridView.Update();
+        //        }
+        //    }
+        //}
     }
 }
