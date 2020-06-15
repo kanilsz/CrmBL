@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.Entity;
 using System.Windows.Forms;
 using CrmBL.Model;
 
@@ -13,28 +14,30 @@ namespace CrmUI
             db = new CrmContext();
         }
      
+        private void ShowCatalog<T>(DbSet<T> dbSet) where T :class
+        {
+            var catalog = new Catalog<T>(dbSet);
+            catalog.Show();
+        }
         private void SellerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var catalogSeller = new Catalog<Seller>(db.Sellers);
-            catalogSeller.Show();
+            ShowCatalog<Seller>(db.Sellers);
         }
 
         private void ProductToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var catalogProduct = new Catalog<Product>(db.Products);
-            catalogProduct.Show();
+  
+            ShowCatalog<Product>(db.Products);
         }
 
         private void CustomerToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var catalogCustomer = new Catalog<Customer>(db.Customers);
-            catalogCustomer.Show();
+        {         
+            ShowCatalog<Customer>(db.Customers);
         }
 
         private void CheckToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var catalogCheck = new Catalog<Check>(db.Checks);
-            catalogCheck.Show();
+        {        
+            ShowCatalog<Check>(db.Checks);
         }
 
         private void SellerAddToolStripMenuItem1_Click(object sender, EventArgs e)
