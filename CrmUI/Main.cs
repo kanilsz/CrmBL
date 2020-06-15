@@ -16,7 +16,7 @@ namespace CrmUI
      
         private void ShowCatalog<T>(DbSet<T> dbSet) where T :class
         {
-            var catalog = new Catalog<T>(dbSet);
+            var catalog = new Catalog<T>(dbSet,db);
             catalog.Show();
         }
         private void SellerToolStripMenuItem_Click(object sender, EventArgs e)
