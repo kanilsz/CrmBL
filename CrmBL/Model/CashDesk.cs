@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace CrmBL.Model
 {
@@ -54,7 +48,7 @@ namespace CrmBL.Model
                     Seller = Seller,
                     CustomerId = card.Customer.CustomerId,
                     Customer = card.Customer,
-                    Created = DateTime.Now 
+                    Created = DateTime.Now
                 };
                 if (!IsModel)
                 {
@@ -95,8 +89,8 @@ namespace CrmBL.Model
                         db.SaveChanges();
                     }
                 }
-
             }
+            return sum;
 
         }
     }
