@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace CrmBL.Model
 {
-    class CashDesk
+    public class CashDesk
     {
         CrmContext db = new CrmContext();
         public int Number { get; set; }
