@@ -49,7 +49,7 @@
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(143, 110);
             this.buttonExit.TabIndex = 0;
-            this.buttonExit.Text = "EVEY!!!!";
+            this.buttonExit.Text = "AWAY!!!!";
             this.buttonExit.UseVisualStyleBackColor = false;
             this.buttonExit.Click += new System.EventHandler(this.button1_Click);
             // 
