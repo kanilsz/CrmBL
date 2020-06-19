@@ -34,8 +34,18 @@ namespace CrmBL.Model
         }
         public void Start()
         {
-            var customers = Generator.GetNewCustomers(10);
+             CreateCarts();
+            //   var cash = CashDesks.FirstOrDefault(); //TODO: where queue is min      
+            while (true)
+            {
+                var cash = CashDesks[rnd.Next(CashDesks.Count - 1)];
+                cash.Dequeue();
+            }
+        }
 
+        private void CreateCarts(int customerCount)
+        {
+            var customers = Generator.GetNewCustomers(customerCount);
             var carts = new Queue<Cart>();
 
             foreach (var customer in customers)
@@ -49,23 +59,12 @@ namespace CrmBL.Model
 
                 carts.Enqueue(cart);
             }
-            //   var cash = CashDesks.FirstOrDefault(); //TODO: where queue is min
-            
-            while(carts.Count>0)
+            while (carts.Count > 0)
             {
                 var cash = CashDesks[rnd.Next(CashDesks.Count - 1)];
                 cash.Enqueue(carts.Dequeue());
             }
             
-                
-              
-           
-           
-            while(true)
-            {
-                var cash = CashDesks[rnd.Next(CashDesks.Count - 1)];
-                cash.Dequeue();
-            }
         }
     }
 }
