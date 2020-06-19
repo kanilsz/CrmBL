@@ -76,7 +76,7 @@ namespace CrmBL.Model
                     {
                         cart.Add(product);
                     }
-                    var cash = CashDesks[rnd.Next(CashDesks.Count - 1)];
+                    var cash = CashDesks[rnd.Next(CashDesks.Count)];
                     cash.Enqueue(cart);
                 }
                 Thread.Sleep(sleep);

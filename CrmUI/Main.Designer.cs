@@ -39,6 +39,7 @@
             this.customerAddToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.checkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.додатиToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.modelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,10 +58,11 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.сутностіToolStripMenuItem});
+            this.сутностіToolStripMenuItem,
+            this.modelToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(766, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(766, 30);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -72,7 +74,7 @@
             this.customerToolStripMenuItem,
             this.checkToolStripMenuItem});
             this.сутностіToolStripMenuItem.Name = "сутностіToolStripMenuItem";
-            this.сутностіToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
+            this.сутностіToolStripMenuItem.Size = new System.Drawing.Size(80, 26);
             this.сутностіToolStripMenuItem.Text = "Сутності";
             // 
             // productToolStripMenuItem
@@ -138,6 +140,13 @@
             this.додатиToolStripMenuItem3.Size = new System.Drawing.Size(142, 26);
             this.додатиToolStripMenuItem3.Text = "Додати";
             // 
+            // modelToolStripMenuItem
+            // 
+            this.modelToolStripMenuItem.Name = "modelToolStripMenuItem";
+            this.modelToolStripMenuItem.Size = new System.Drawing.Size(123, 26);
+            this.modelToolStripMenuItem.Text = "Моделювання";
+            this.modelToolStripMenuItem.Click += new System.EventHandler(this.modelToolStripMenuItem_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -168,6 +177,7 @@
         private System.Windows.Forms.ToolStripMenuItem sellerAddToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem customerAddToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem додатиToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem modelToolStripMenuItem;
     }
 }
 

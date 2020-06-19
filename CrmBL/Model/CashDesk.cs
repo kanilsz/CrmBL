@@ -99,10 +99,15 @@ namespace CrmBL.Model
                         db.SaveChanges();
                     }
                     CheckClosed?.Invoke(this, check);
+
                 }
             }
             return sum;
 
+        }
+        public override string ToString()
+        {
+            return $"Каса №{Number}";
         }
     }
 }
