@@ -172,12 +172,12 @@ namespace CrmUI
 
         private void listBox2_DoubleClick(object sender, EventArgs e)
         {
-            //if (listBox1.SelectedItem is Product product)
-            //{
-            //    cart.(product);
-            //    listBox2.Items.Add(product);
-            //    UpdateLists();
-            //}
+            if (listBox2.SelectedItem is Product product)
+            {
+                cart.Remove(product);
+                listBox2.Items.Remove(product);
+                UpdateLists();
+            }
         }
     }
 }

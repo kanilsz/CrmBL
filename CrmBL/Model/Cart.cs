@@ -28,6 +28,17 @@ namespace CrmBL.Model
                 Products.Add(product, 1);
             }
         }
+        public void Remove(Product product)
+        {
+            if (Products.TryGetValue(product, out int count))
+            {
+                Products[product] = --count;
+            }
+            else
+            {
+                Products.Remove(product);
+            }
+        }
         public IEnumerator GetEnumerator()
         {
             foreach (var product in Products.Keys)

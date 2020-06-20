@@ -56,8 +56,8 @@ namespace CrmUI
 
         private void CashDesk_CheckClosed(object sender, Check e)
         {
-
-            Price.Invoke((Action)delegate
+         
+            Price?.Invoke((Action)delegate
            {
                Price.Value += e.Summary;
                QueueLenghth.Value = cashDesk.Count;
