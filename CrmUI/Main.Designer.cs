@@ -40,17 +40,24 @@
             this.checkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.додатиToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.modelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonExit
             // 
+            this.buttonExit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonExit.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.buttonExit.Location = new System.Drawing.Point(309, 164);
+            this.buttonExit.Location = new System.Drawing.Point(574, 438);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(143, 110);
+            this.buttonExit.Size = new System.Drawing.Size(128, 87);
             this.buttonExit.TabIndex = 0;
-            this.buttonExit.Text = "AWAY!!!!";
+            this.buttonExit.Text = "Вихід";
             this.buttonExit.UseVisualStyleBackColor = false;
             this.buttonExit.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -62,7 +69,7 @@
             this.modelToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(766, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(710, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -74,7 +81,7 @@
             this.customerToolStripMenuItem,
             this.checkToolStripMenuItem});
             this.сутностіToolStripMenuItem.Name = "сутностіToolStripMenuItem";
-            this.сутностіToolStripMenuItem.Size = new System.Drawing.Size(80, 26);
+            this.сутностіToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
             this.сутностіToolStripMenuItem.Text = "Сутності";
             // 
             // productToolStripMenuItem
@@ -143,20 +150,76 @@
             // modelToolStripMenuItem
             // 
             this.modelToolStripMenuItem.Name = "modelToolStripMenuItem";
-            this.modelToolStripMenuItem.Size = new System.Drawing.Size(123, 26);
+            this.modelToolStripMenuItem.Size = new System.Drawing.Size(123, 24);
             this.modelToolStripMenuItem.Text = "Моделювання";
             this.modelToolStripMenuItem.Click += new System.EventHandler(this.modelToolStripMenuItem_Click);
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(12, 31);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(302, 500);
+            this.listBox1.TabIndex = 2;
+            this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 16;
+            this.listBox2.Location = new System.Drawing.Point(338, 55);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(228, 404);
+            this.listBox2.TabIndex = 3;
+            this.listBox2.DoubleClick += new System.EventHandler(this.listBox2_DoubleClick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(335, 462);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 17);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Загально";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(338, 500);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(228, 25);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Сплатити";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(335, 28);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(180, 17);
+            this.linkLabel1.TabIndex = 6;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "День добрий, користувач!";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(766, 452);
+            this.ClientSize = new System.Drawing.Size(710, 537);
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.listBox2);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Main";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -178,6 +241,11 @@
         private System.Windows.Forms.ToolStripMenuItem customerAddToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem додатиToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem modelToolStripMenuItem;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 

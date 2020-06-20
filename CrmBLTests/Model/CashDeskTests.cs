@@ -47,7 +47,7 @@ namespace CrmBL.Model.Tests
             var cart1 = new Cart(customer1);
             var cart2 = new Cart(customer2);
 
-            var cashDesk = new CashDesk(1, seller);
+            var cashDesk = new CashDesk(1, seller,null);
             cashDesk.MaxQueueLenght = 10;
             var cart1ExpectedResult = 400;
             var cart2ExpectedResult = 300;

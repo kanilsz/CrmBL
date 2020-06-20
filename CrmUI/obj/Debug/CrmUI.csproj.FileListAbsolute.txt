@@ -21,3 +21,4 @@ D:\IT\repos\CrmModelShop\CrmUI\obj\Debug\CrmUI.CustomerForm.resources
 D:\IT\repos\CrmModelShop\CrmUI\obj\Debug\CrmUI.SellerForm.resources
 D:\IT\repos\CrmModelShop\CrmUI\obj\Debug\CrmUI.ProductForm.resources
 D:\IT\repos\CrmModelShop\CrmUI\obj\Debug\CrmUI.ModelForm.resources
+D:\IT\repos\CrmModelShop\CrmUI\obj\Debug\CrmUI.Login.resources
